@@ -2,5 +2,6 @@
 ${Browser}      Firefox
 ${Website}      https://www.saucedemo.com/
 
-${Login}        standard_user
-${Password}     secret_sauce
+${StandardLogin}        standard_user
+${LockedOutLogin}       locked_out_user
+${MutualPassword}     secret_sauce
