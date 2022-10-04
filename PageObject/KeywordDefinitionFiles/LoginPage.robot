@@ -6,6 +6,7 @@ Resource    ../PageObject/Locators/Locators.robot
 *** Keywords ***
 Open Browser To Starting Page
     open browser                        ${Website}    ${Browser}
+    maximize browser window
     wait until page contains element    ${LoginInput}
 
 Input Credentials

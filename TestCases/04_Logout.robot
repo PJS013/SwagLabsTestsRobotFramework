@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Login To Swag Labs Website With Locked Out Account
+Documentation    Logout From Swag Labs Website
 Library    SeleniumLibrary
 Resource    ../PageObject/KeywordDefinitionFiles/LoginPage.robot
 Resource    ../PageObject/KeywordDefinitionFiles/MainPage.robot
@@ -8,9 +8,10 @@ Resource    ../PageObject/KeywordDefinitionFiles/MainPage.robot
 Test title
     [Tags]    Ready
     Open Browser To Starting Page
-    Input Credentials    ${LockedOutLogin}    ${MutualPassword}
+    Input Credentials    ${StandardLogin}    ${MutualPassword}
     Click Login Button
-    Main Page Should Not Be Open
+    Main Page Should Be Open
+    Open Burger Menu
     [Teardown]    Close Browser
 
 
